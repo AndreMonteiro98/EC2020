@@ -1,0 +1,1456 @@
+Prefix: : <http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC>
+
+
+AnnotationProperty: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: NumeroDeReqMaior3
+
+    EquivalentTo: 
+        xsd:int[>= "3"^^xsd:int]
+    
+    
+Datatype: maisDe500Pg
+
+    EquivalentTo: 
+        xsd:int[> "500"^^xsd:int]
+    
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:dateTime
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:int
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:language
+
+    
+Datatype: xsd:nonPositiveInteger
+
+    
+Datatype: xsd:positiveInteger
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: AutorContribuição
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        AutorPublicação
+    
+    Domain: 
+        Contribuição
+    
+    Range: 
+        autor
+    
+    InverseOf: 
+        éAutorContribuição
+    
+    
+ObjectProperty: AutorPublicação
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        AutorContribuição
+    
+    Domain: 
+        Publicação
+    
+    Range: 
+        autor
+    
+    InverseOf: 
+        éAutorPublicação
+    
+    
+ObjectProperty: RequesitadoPor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        ExemplarDisp
+    
+    Range: 
+        utente
+    
+    InverseOf: 
+        Requesitou
+    
+    
+ObjectProperty: Requesitou
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        utente
+    
+    Range: 
+        ExemplarDisp
+    
+    InverseOf: 
+        RequesitadoPor
+    
+    
+ObjectProperty: TraduzidoPor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        ediçãoTraduzidas
+    
+    Range: 
+        tradutor
+    
+    InverseOf: 
+        éTradutor
+    
+    
+ObjectProperty: coAutores
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        autor
+    
+    Range: 
+        autor
+    
+    
+ObjectProperty: emLinguasDiferentes
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        livros
+    
+    Range: 
+        livros
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: podeConsultar
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Biblioteca_Central
+    
+    Range: 
+        Publicação
+    
+    
+ObjectProperty: podeRequesitar
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Biblioteca_Central
+    
+    Range: 
+        ExemplarDisp
+    
+    
+ObjectProperty: temContribuiçãoLivro
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        temContribuições
+    
+    Range: 
+        Contribuição
+    
+    
+ObjectProperty: temContribuições
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        temContribuiçãoLivro
+    
+    Domain: 
+        Publicação_periódica
+    
+    Range: 
+        Contribuição
+    
+    InverseOf: 
+        éContribuição
+    
+    
+ObjectProperty: temDiretor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        jornal
+    
+    Range: 
+        diretor
+    
+    InverseOf: 
+        éDiretor
+    
+    
+ObjectProperty: temEditor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Publicação
+    
+    Range: 
+        editor
+    
+    InverseOf: 
+        éEditor
+    
+    
+ObjectProperty: temEditora
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        livros
+    
+    Range: 
+        Editora
+    
+    InverseOf: 
+        éEditora
+    
+    
+ObjectProperty: temEdição
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        temEdiçãoLivro
+    
+    Domain: 
+        jornal
+    
+    Range: 
+        edição
+    
+    InverseOf: 
+        éEdição
+    
+    
+ObjectProperty: temEdiçãoLivro
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        temEdição
+    
+    
+ObjectProperty: temEdiçãoOriginal
+
+    SubPropertyOf: 
+        temEdiçãoLivro
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        livros
+    
+    Range: 
+        ediçãoNTraduzidas
+    
+    InverseOf: 
+        éEdiçãoOriginal
+    
+    
+ObjectProperty: temEdiçãoTraduzida
+
+    SubPropertyOf: 
+        temEdiçãoLivro
+    
+    Domain: 
+        livros
+    
+    Range: 
+        ediçãoTraduzidas
+    
+    InverseOf: 
+        éEdiçãoTraduzida
+    
+    
+ObjectProperty: temEstatuto
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        Biblioteca_Central
+    
+    Range: 
+        Estatuto
+    
+    
+ObjectProperty: temExemplar
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Publicação
+    
+    Range: 
+        ExemplarDisp
+    
+    InverseOf: 
+        éExemplar
+    
+    
+ObjectProperty: temPeriocidade
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Publicação_periódica
+    
+    Range: 
+        Periodização
+    
+    
+ObjectProperty: temPublicação
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        autor
+    
+    Range: 
+        Publicação
+    
+    
+ObjectProperty: temVolume
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        éVolume
+    
+    
+ObjectProperty: éAutorContribuição
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        autor
+    
+    Range: 
+        Contribuição
+    
+    InverseOf: 
+        AutorContribuição
+    
+    
+ObjectProperty: éAutorPublicação
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        autor
+    
+    Range: 
+        Publicação
+    
+    InverseOf: 
+        AutorPublicação
+    
+    
+ObjectProperty: éContribuição
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Contribuição
+    
+    Range: 
+        Publicação_periódica
+    
+    InverseOf: 
+        temContribuições
+    
+    
+ObjectProperty: éDiretor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        diretor
+    
+    Range: 
+        jornal
+    
+    InverseOf: 
+        temDiretor
+    
+    
+ObjectProperty: éDoTipo
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Range: 
+        Tipos
+    
+    
+ObjectProperty: éEditor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        editor
+    
+    Range: 
+        Publicação
+    
+    InverseOf: 
+        temEditor
+    
+    
+ObjectProperty: éEditora
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        Editora
+    
+    Range: 
+        Publicação
+    
+    InverseOf: 
+        temEditora
+    
+    
+ObjectProperty: éEdição
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        éEdiçãoLivro
+    
+    Domain: 
+        edição
+    
+    Range: 
+        jornal
+    
+    InverseOf: 
+        temEdição
+    
+    
+ObjectProperty: éEdiçãoLivro
+
+    DisjointWith: 
+        éEdição
+    
+    
+ObjectProperty: éEdiçãoOriginal
+
+    SubPropertyOf: 
+        éEdiçãoLivro
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        ediçãoNTraduzidas
+    
+    Range: 
+        livros
+    
+    InverseOf: 
+        temEdiçãoOriginal
+    
+    
+ObjectProperty: éEdiçãoTraduzida
+
+    SubPropertyOf: 
+        éEdiçãoLivro
+    
+    Domain: 
+        ediçãoTraduzidas
+    
+    Range: 
+        livros
+    
+    InverseOf: 
+        temEdiçãoTraduzida
+    
+    
+ObjectProperty: éExemplar
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        ExemplarDisp
+    
+    Range: 
+        livros
+    
+    InverseOf: 
+        temExemplar
+    
+    
+ObjectProperty: éTradutor
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        tradutor
+    
+    Range: 
+        ediçãoTraduzidas
+    
+    InverseOf: 
+        TraduzidoPor
+    
+    
+ObjectProperty: éVersão
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        livros
+    
+    Range: 
+        livros
+    
+    
+ObjectProperty: éVolume
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Range: 
+        livros
+    
+    InverseOf: 
+        temVolume
+    
+    
+DataProperty: fundadaEm
+
+    Domain: 
+        Editora
+    
+    Range: 
+        (xsd:dateTime or xsd:int or xsd:string)
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: numeroDoVolume
+
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+DataProperty: temDataEdição
+
+    Range: 
+        (xsd:dateTime or xsd:int or xsd:string)
+    
+    
+DataProperty: temDataOriginal
+
+    Range: 
+        (xsd:dateTime or xsd:int or xsd:string)
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: temEdiçãoISBN
+
+    Range: 
+        (xsd:int or xsd:integer)
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: temLinguagem
+
+    Range: 
+        (xsd:language or xsd:string)
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: temNumeroEdição
+
+    Range: 
+        xsd:int
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: temNumeroPaginas
+
+    Domain: 
+        livros
+    
+    Range: 
+        xsd:int
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: temNumeroRequesições
+
+    Range: 
+        xsd:int
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: temTitulo
+
+    Range: 
+        xsd:string
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: éTraduzidoPara
+
+    Range: 
+        (xsd:language or xsd:string)
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: éum
+
+    Range: 
+        xsd:string
+    
+    
+Class: Atrasados
+
+    EquivalentTo: 
+        utente
+         and (Requesitou some 
+            ((RequesitadoPor some utente)
+             and (temEstatuto value atrasado)))
+    
+    
+Class: Autor2Livros
+
+    EquivalentTo: 
+        autor
+         and (éAutorPublicação min 2 livros)
+    
+    
+Class: AutorEmPDeL
+
+    EquivalentTo: 
+        autor
+         and ((éAutorContribuição some (éContribuição some (éEdição some (temPeriocidade value diária))))
+         and (éAutorPublicação some Publicação_não_periódica))
+    
+    
+Class: Biblioteca_Central
+
+    EquivalentTo: 
+        (podeConsultar some Publicação)
+         and (podeRequesitar only ExemplarDisp)
+    
+    
+Class: Contribuição
+
+    EquivalentTo: 
+        AutorContribuição min 1 autor
+    
+    
+Class: EMPT500
+
+    EquivalentTo: 
+        livros
+         and (temEdiçãoLivro some (temNumeroPaginas some maisDe500Pg))
+    
+    
+Class: Editora
+
+    EquivalentTo: 
+        éEditora some livros
+    
+    
+Class: Estatuto
+
+    EquivalentTo: 
+        {Restrito , atrasado , livre , requisitado}
+    
+    
+Class: ExemplarDisp
+
+    EquivalentTo: 
+        (temEstatuto value atrasado) or (temEstatuto value livre) or (temEstatuto value requisitado)
+    
+    SubClassOf: 
+        Biblioteca_Central
+    
+    DisjointWith: 
+        Publicação_periódica
+    
+    
+Class: ExemplarIndis.
+
+    EquivalentTo: 
+        temEstatuto value Restrito
+    
+    SubClassOf: 
+        Biblioteca_Central
+    
+    
+Class: ExemplarRequesitado
+
+    EquivalentTo: 
+        (temEstatuto value atrasado) or (temEstatuto value requisitado)
+    
+    SubClassOf: 
+        ExemplarDisp
+    
+    
+Class: ExemplarRequesitar
+
+    EquivalentTo: 
+        temEstatuto value livre
+    
+    SubClassOf: 
+        ExemplarDisp
+    
+    
+Class: Periodização
+
+    
+Class: Pessoa
+
+    
+Class: Populares
+
+    EquivalentTo: 
+        ExemplarRequesitado
+         and (((temEstatuto value atrasado) or (temEstatuto value requisitado))
+         and (temNumeroRequesições some NumeroDeReqMaior3))
+    
+    
+Class: Publicação
+
+    EquivalentTo: 
+        AutorPublicação min 1 autor
+    
+    
+Class: Publicação_não_periódica
+
+    SubClassOf: 
+        Publicação
+    
+    DisjointWith: 
+        Publicação_periódica
+    
+    
+Class: Publicação_periódica
+
+    EquivalentTo: 
+        temContribuições some Contribuição,
+        temPeriocidade exactly 1 Periodização
+    
+    SubClassOf: 
+        Publicação
+    
+    DisjointWith: 
+        ExemplarDisp, Publicação_não_periódica
+    
+    
+Class: TipoArtigo
+
+    SubClassOf: 
+        Tipos
+    
+    
+Class: TipoEscrita
+
+    SubClassOf: 
+        Tipos
+    
+    
+Class: Tipos
+
+    
+Class: Traduzidos
+
+    EquivalentTo: 
+        livros
+         and (temEdiçãoLivro some (éTraduzidoPara some xsd:string))
+    
+    
+Class: autor
+
+    EquivalentTo: 
+        (éAutorContribuição some Contribuição) or (éAutorPublicação some Publicação)
+    
+    SubClassOf: 
+        Pessoa
+    
+    
+Class: diretor
+
+    EquivalentTo: 
+        éDiretor some Editora
+    
+    SubClassOf: 
+        Pessoa
+    
+    
+Class: editor
+
+    EquivalentTo: 
+        éEditor some Publicação
+    
+    SubClassOf: 
+        Pessoa
+    
+    
+Class: edição
+
+    EquivalentTo: 
+        éEdição some jornal
+    
+    SubClassOf: 
+        jornal
+    
+    
+Class: ediçãoNTraduzidas
+
+    SubClassOf: 
+        livros
+    
+    
+Class: ediçãoTraduzidas
+
+    EquivalentTo: 
+        éTraduzidoPara some xsd:string
+    
+    SubClassOf: 
+        livros
+    
+    
+Class: jornal
+
+    EquivalentTo: 
+        temEdição some edição
+    
+    SubClassOf: 
+        Publicação_periódica
+    
+    
+Class: livros
+
+    SubClassOf: 
+        Publicação_não_periódica
+    
+    
+Class: revista
+
+    SubClassOf: 
+        Publicação_periódica
+    
+    
+Class: tradutor
+
+    EquivalentTo: 
+        éTradutor some Publicação
+    
+    SubClassOf: 
+        Pessoa
+    
+    
+Class: utente
+
+    SubClassOf: 
+        Pessoa,
+        Requesitou max 1 ExemplarDisp
+    
+    
+Individual: Amadeu
+
+    Types: 
+        utente
+    
+    Facts:  
+     Requesitou  MemorialDoConventoEX1
+    
+    DifferentFrom: 
+        joão
+    
+    
+Individual: Andreas_Klotsch
+
+    Types: 
+        tradutor
+    
+    Facts:  
+     éTradutor  DasMemorial
+    
+    DifferentFrom: 
+        Frederico_Lourenço
+    
+    
+Individual: Cai_Run
+
+    Types: 
+        autor
+    
+    Facts:  
+     éAutorContribuição  contribuiçãoEd1
+    
+    
+Individual: Chiara_Ghidini
+
+    Types: 
+        editor
+    
+    Facts:  
+     éEditor  TheSemanticWeb
+    
+    
+Individual: Ciência_da_Computação
+
+    Types: 
+        TipoEscrita
+    
+    
+Individual: DasMemorial
+
+    Types: 
+        ediçãoTraduzidas
+    
+    Facts:  
+     TraduzidoPor  Andreas_Klotsch,
+     temEditora  Hoffman_Und_Campe,
+     éEdiçãoTraduzida  LivroMemorialDoConvento,
+     temDataEdição  2018,
+     temLinguagem  "Alemã",
+     temTitulo  "Das memorial"
+    
+    
+Individual: Ed1MemorialDoConvento
+
+    Types: 
+        ediçãoNTraduzidas
+    
+    Facts:  
+     temEditora  Editorial_Caminho,
+     temExemplar  MemorialDoConventoEX1,
+     éEdiçãoOriginal  LivroMemorialDoConvento,
+     temDataOriginal  1982,
+     temLinguagem  "Português",
+     temTitulo  "Memorial Do Convento"
+    
+    
+Individual: Editorial_Caminho
+
+    Types: 
+        Editora
+    
+    Facts:  
+     éEditora  Ed1MemorialDoConvento,
+     fundadaEm  1975
+    
+    
+Individual: EdiçãoOdisseia
+
+    Types: 
+        ediçãoTraduzidas
+    
+    Facts:  
+     TraduzidoPor  Frederico_Lourenço,
+     temEditora  Quetzal_Editores,
+     temExemplar  odisseiaEx1,
+     temExemplar  odisseiaEx2,
+     éEdiçãoTraduzida  LivroOdisseia,
+     temDataEdição  2018,
+     temEdiçãoISBN  9789897224386,
+     temNumeroPaginas  688,
+     temTitulo  "odisseia",
+     éTraduzidoPara  "Português"
+    
+    
+Individual: ExemplarRestrito
+
+    Facts:  
+     temEstatuto  Restrito
+    
+    
+Individual: Frederico_Lourenço
+
+    Types: 
+        tradutor
+    
+    Facts:  
+     éTradutor  EdiçãoOdisseia
+    
+    DifferentFrom: 
+        Andreas_Klotsch
+    
+    
+Individual: Heiko_Paulheim
+
+    Types: 
+        autor
+    
+    Facts:  
+     éAutorContribuição  Uncovering_the_Semantics_of_Wikipedia_Categories
+    
+    
+Individual: Hoffman_Und_Campe
+
+    Types: 
+        Editora
+    
+    Facts:  
+     éEditora  DasMemorial
+    
+    
+Individual: Homero
+
+    Types: 
+        autor
+    
+    Facts:  
+     éAutorPublicação  LivroOdisseia
+    
+    
+Individual: José_Saramago
+
+    Types: 
+        autor
+    
+    Facts:  
+     éAutorPublicação  LivroMemorialDoConvento
+    
+    
+Individual: LivroMemorialDoConvento
+
+    Types: 
+        livros
+    
+    Facts:  
+     AutorPublicação  José_Saramago,
+     temEdiçãoOriginal  Ed1MemorialDoConvento,
+     temEdiçãoTraduzida  DasMemorial,
+     éDoTipo  romance
+    
+    
+Individual: LivroOdisseia
+
+    Types: 
+        livros
+    
+    Facts:  
+     AutorPublicação  Homero,
+     temEdiçãoTraduzida  EdiçãoOdisseia,
+     éDoTipo  poemaÉpico,
+     temLinguagem  "Grego antigo"
+    
+    
+Individual: Manuel_Carvalho
+
+    Types: 
+        diretor
+    
+    Facts:  
+     éDiretor  Publico
+    
+    
+Individual: Maria_Maleshkova
+
+    Types: 
+        editor
+    
+    Facts:  
+     éEditor  TheSemanticWeb
+    
+    
+Individual: MemorialDoConventoEX1
+
+    Facts:  
+     RequesitadoPor  Amadeu,
+     temEstatuto  requisitado,
+     éExemplar  Ed1MemorialDoConvento,
+     temNumeroRequesições  1,
+     éum  "Exemplar"
+    
+    
+Individual: Nicolas_Heist
+
+    Types: 
+        autor
+    
+    Facts:  
+     éAutorContribuição  Uncovering_the_Semantics_of_Wikipedia_Categories
+    
+    
+Individual: Olaf_Hartig
+
+    Types: 
+        editor
+    
+    Facts:  
+     éEditor  TheSemanticWeb
+    
+    
+Individual: Publico
+
+    Types: 
+        jornal
+    
+    Facts:  
+     temDiretor  Manuel_Carvalho,
+     temEdição  edição1,
+     temPeriocidade  diária
+    
+    
+Individual: Quetzal_Editores
+
+    Types: 
+        Editora
+    
+    Facts:  
+     éEditora  EdiçãoOdisseia,
+     fundadaEm  1987
+    
+    
+Individual: Restrito
+
+    
+Individual: Springer
+
+    Types: 
+        Editora
+    
+    Facts:  
+     éEditora  TheSemanticWeb
+    
+    
+Individual: TheSemanticWeb
+
+    Types: 
+        livros
+    
+    Facts:  
+     temEditor  Chiara_Ghidini,
+     temEditor  Maria_Maleshkova,
+     temEditor  Olaf_Hartig,
+     temEditora  Springer,
+     temVolume  TheSemanticWebV1,
+     temVolume  TheSemanticWebV2,
+     éDoTipo  Ciência_da_Computação,
+     temDataEdição  2019,
+     temTitulo  "The Semantic Web – ISWC 2019"
+    
+    
+Individual: TheSemanticWebV1
+
+    Facts:  
+     temContribuiçãoLivro  Uncovering_the_Semantics_of_Wikipedia_Categories,
+     éVolume  TheSemanticWeb,
+     numeroDoVolume  1
+    
+    DifferentFrom: 
+        TheSemanticWebV2
+    
+    
+Individual: TheSemanticWebV2
+
+    Facts:  
+     éVolume  TheSemanticWeb,
+     numeroDoVolume  2
+    
+    DifferentFrom: 
+        TheSemanticWebV1
+    
+    
+Individual: Uncovering_the_Semantics_of_Wikipedia_Categories
+
+    Types: 
+        Contribuição
+    
+    Facts:  
+     AutorContribuição  Heiko_Paulheim,
+     AutorContribuição  Nicolas_Heist
+    
+    DifferentFrom: 
+        contribuiçãoEd1
+    
+    
+Individual: anual
+
+    Types: 
+        Periodização
+    
+    
+Individual: artigoDeOpinião
+
+    Types: 
+        TipoArtigo
+    
+    
+Individual: atrasado
+
+    
+Individual: bimestral
+
+    Types: 
+        Periodização
+    
+    
+Individual: contribuiçãoEd1
+
+    Types: 
+        Contribuição
+    
+    Facts:  
+     AutorContribuição  Cai_Run,
+     éContribuição  edição1,
+     éDoTipo  artigoDeOpinião,
+     temTitulo  "É óbvio para todos o contributo da China para a luta global contra a
+pandemia da covid-19"
+    
+    DifferentFrom: 
+        Uncovering_the_Semantics_of_Wikipedia_Categories
+    
+    
+Individual: diária
+
+    Types: 
+        Periodização
+    
+    
+Individual: edição1
+
+    Types: 
+        edição
+    
+    Facts:  
+     temContribuições  contribuiçãoEd1,
+     éEdição  Publico,
+     temDataEdição  "27 de Abril de 2020",
+     temNumeroEdição  10960
+    
+    
+Individual: ediçãoExemplo
+
+    Types: 
+        ediçãoNTraduzidas
+    
+    
+Individual: joão
+
+    Types: 
+        utente
+    
+    Facts:  
+     Requesitou  odisseiaEx1
+    
+    DifferentFrom: 
+        Amadeu
+    
+    
+Individual: livre
+
+    
+Individual: mensal
+
+    Types: 
+        Periodização
+    
+    
+Individual: odisseiaEx1
+
+    Facts:  
+     RequesitadoPor  joão,
+     temEstatuto  atrasado,
+     éExemplar  EdiçãoOdisseia,
+     temNumeroRequesições  4,
+     éum  "Exemplar"
+    
+    
+Individual: odisseiaEx2
+
+    Facts:  
+     temEstatuto  livre,
+     éExemplar  EdiçãoOdisseia,
+     temNumeroRequesições  5,
+     éum  "Exemplar"
+    
+    
+Individual: poemaÉpico
+
+    Types: 
+        TipoEscrita
+    
+    
+Individual: quinzenal
+
+    Types: 
+        Periodização
+    
+    
+Individual: requisitado
+
+    
+Individual: romance
+
+    Types: 
+        TipoEscrita
+    
+    
+Individual: semanal
+
+    Types: 
+        Periodização
+    
+    
+Individual: semestral
+
+    Types: 
+        Periodização
+    
+    
+Individual: trimestral
+
+    Types: 
+        Periodização
+    
+    
+DisjointClasses: 
+    autor,diretor,editor,tradutor
+
+DisjointClasses: 
+    jornal,livros,revista
+
+DifferentIndividuals: 
+    Cai_Run,Heiko_Paulheim,Homero,José_Saramago,Nicolas_Heist
+
+DifferentIndividuals: 
+    Chiara_Ghidini,Maria_Maleshkova,Olaf_Hartig
+
+DifferentIndividuals: 
+    Ciência_da_Computação,poemaÉpico,romance
+
+DifferentIndividuals: 
+    DasMemorial,Ed1MemorialDoConvento,EdiçãoOdisseia,edição1,ediçãoExemplo
+
+DifferentIndividuals: 
+    Editorial_Caminho,Hoffman_Und_Campe,Quetzal_Editores,Springer
+
+DifferentIndividuals: 
+    ExemplarRestrito,MemorialDoConventoEX1,odisseiaEx1,odisseiaEx2
+
+DifferentIndividuals: 
+    LivroMemorialDoConvento,LivroOdisseia,TheSemanticWeb
+
+DifferentIndividuals: 
+    Restrito,atrasado,livre,requisitado
+
+DifferentIndividuals: 
+    anual,bimestral,diária,mensal,quinzenal,semanal,semestral,trimestral
+
+Rule: 
+    temLinguagem(?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#x>, ?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#lp>), temLinguagem(?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#y>, ?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#ld>),  DifferentFrom (?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#lp>, ?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#ld>), temEdiçãoLivro(?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#p>, ?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#y>), temEdiçãoLivro(?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#p>, ?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#x>) -> emLinguasDiferentes(?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#x>, ?<http://www.semanticweb.org/andrémonteiro/ontologies/2020/4/trabalhoDeEC#y>)
+
+Rule: 
+    éAutorPublicação(?x, ?l), éAutorPublicação(?y, ?l),  DifferentFrom (?x, ?y) -> coAutores(?x, ?y)
+
