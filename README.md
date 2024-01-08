@@ -1,8 +1,8 @@
-O objectivo deste projecto é a construção de uma ontologia para modelar alguns aspectos relacionados com bibliotecas.
-São focadas duas dimensões do problema: a representação da informação sobre os documentos guardados e a representação das requisições desses documentos.
-Este trabalho foi Modelado em OWL.
+The objective of this project is the construction of an ontology to model certain aspects related to libraries. Two dimensions of the problem are focused on: the representation of information about stored documents and the representation of requests for these documents. This work has been modeled in OWL.
 
-A Linguagem OWL (Web Ontology Language) é um padrão destinado a definir e implementar ontologias na World Wide Web. Em uma ontologia OWL, é possível especificar classes, suas propriedades e os relacionamentos entre elas. 
-A OWL foi projetada para ser utilizada por aplicações que necessitam processar informações em vez de apenas apresentá-las aos humanos. 
-Sua estrutura facilita a interpretação por máquinas, fornecendo um vocabulário adicional com uma semântica formal. 
-A OWL é atualmente uma recomendação da W3C, ou seja, um padrão amplamente aceito na indústria.
+The Web Ontology Language (OWL) is a standard designed for defining and implementing ontologies on the World Wide Web. In an OWL ontology, it is possible to specify classes, their properties, and the relationships between them. OWL is designed to be used by applications that need to process information rather than just present it to humans. Its structure facilitates machine interpretation by providing additional vocabulary with formal semantics. OWL is currently a W3C recommendation, meaning it is a widely accepted industry standard.
+
+
+
+
+
